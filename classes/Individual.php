@@ -38,30 +38,6 @@ class Individual {
 
     }
 
-    /*
-    public function __construct(Element $element)
-    {
-        $this->chromosome = $this->encode($element);
-    }
-
-    private function encode(Element $element){
-
-        $chromosomeLength = count($element->getProperties());
-        $this->elementId = $element->getId();
-        $this->elementName = $element->getCssTag();
-
-        $newChromosome = new SplFixedArray($chromosomeLength);
-
-        $chromosomeIndex = 0;
-        foreach ($element->getProperties() as $property) {
-            $newChromosome[$chromosomeIndex] = $property->getRandomValue();
-            $chromosomeIndex++;
-        }
-
-        return $newChromosome;
-
-    }*/
-
     public function getChromosome(){
 
         return $this->chromosome;

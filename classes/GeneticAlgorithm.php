@@ -26,23 +26,6 @@ class GeneticAlgorithm {
         $this->populationSize = $populationSize;
     }
 
-    function decode($id, Individual $individual, Element $element){
-
-        $cssCode = "{$element->getCssTag()}#individual{$id} {".PHP_EOL;
-        $chromosome = $individual->getChromosome()->toArray();
-        $geneIndex = 0;
-
-
-        foreach ($element->getProperties() as $property) {
-
-            $cssCode .= "{$property->getCssName()} : {$property->getValue($chromosome[$geneIndex])}; ";
-            $geneIndex++;
-        }
-        $cssCode .= "}";
-
-        return $cssCode;
-
-    }
 
     public function initPopulation($chromosomeLength){
 
